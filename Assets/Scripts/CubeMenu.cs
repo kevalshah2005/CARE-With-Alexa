@@ -9,12 +9,12 @@ public class CubeMenu : MonoBehaviour
     public GameObject menu;
     public HoverBehaviour hoverBehaviour;
 
-
+    
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
