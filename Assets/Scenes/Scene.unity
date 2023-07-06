@@ -290,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9029294805808665490, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
       propertyPath: m_Name
-      value: Cube (1)
+      value: Cube
       objectReference: {fileID: 0}
     - target: {fileID: 9029294805808665493, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
       propertyPath: m_Enabled
@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 611979067}
   - component: {fileID: 611979066}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
