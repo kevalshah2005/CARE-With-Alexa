@@ -9,6 +9,7 @@ public class HUD : MonoBehaviour
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI utcText;
     public TextMeshProUGUI dateText;
+    public TextMeshProUGUI utcDateText;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +24,6 @@ public class HUD : MonoBehaviour
         timeText.text = now.ToLongTimeString();
         utcText.text = now.ToLocalTime().ToUniversalTime().ToLongTimeString() + " UTC";
         dateText.text = now.ToLongDateString();
+        utcDateText.text = now.ToLocalTime().ToUniversalTime().ToLongDateString() + " UTC";
     }
 }
