@@ -51,6 +51,7 @@ public class WeatherController : MonoBehaviour
         string jsonResponse = reader.ReadToEnd();
         WeatherInfo info = JsonUtility.FromJson<WeatherInfo>(jsonResponse);
 
+        Debug.Log(info.ToString());
         weatherText.text = info.weather[0].main;
 
         return info;
