@@ -9,6 +9,18 @@ using System.Threading.Tasks;
 using UnityEngine.Android;
 using TMPro;
 
+public class WeatherObject
+{
+    public Color color;
+    public GameObject weatherObject;
+
+    public WeatherObject(Color color, GameObject weatherObject)
+    {
+        this.color = color;
+        this.weatherObject = weatherObject;
+    }
+}
+
 public class WeatherController : MonoBehaviour
 {
     private const string API_KEY = "6053b37da94470bbbd0dc501ace7312e";
@@ -16,24 +28,28 @@ public class WeatherController : MonoBehaviour
 
     public string cityId;
     public TextMeshProUGUI weatherText;
+    public GameObject thunderstorm, drizzle, rain, snow, clear, clouds;
 
     public WeatherInfo info;
 
     double latitude = 32.777963, longitude = -96.79622;
 
-    public Dictionary<string, Color> hash = new Dictionary<string, Color>();
+    public Dictionary<string, WeatherObject> hash = new Dictionary<string, WeatherObject>();
+
+    bool weatherDisplay = false;
 
     private float apiCheckCountdown = API_CHECK_MAXTIME;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        hash.Add("Thunderstorm", Color.yellow);
-        hash.Add("Drizzle", Color.green);
-        hash.Add("Rain", Color.blue);
-        hash.Add("Snow", Color.white);
-        hash.Add("Clear", Color.cyan);
-        hash.Add("Clouds", new Color(0.75f, 0.75f, 0.75f));
+        hash.Add("Thunderstorm", new WeatherObject(Color.yellow, thunderstorm));
+        hash.Add("Drizzle", new WeatherObject(Color.green, drizzle));
+        hash.Add("Rain", new WeatherObject(Color.blue, rain));
+        hash.Add("Snow", new WeatherObject(Color.white, snow));
+        hash.Add("Clear", new WeatherObject(Color.cyan, clear));
+        hash.Add("Clouds", new WeatherObject(new Color(0.75f, 0.75f, 0.75f), clouds));
 
         info = GetWeather();
     }
@@ -46,6 +62,31 @@ public class WeatherController : MonoBehaviour
         {
             info = GetWeather();
             apiCheckCountdown = API_CHECK_MAXTIME;
+        }
+
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            weatherDisplay = !weatherDisplay;
+        }
+
+        if (weatherDisplay)
+        {
+            if (!hash.TryGetValue(info.weather[0].main, out WeatherObject weatherObject))
+            {
+                weatherObject = new WeatherObject(Color.red, clear);
+            }
+
+            foreach (var weather in hash) {
+                weather.Value.weatherObject.SetActive(false);
+            }
+
+            weatherObject.weatherObject.SetActive(true);
+        } else
+        {
+            foreach (var weather in hash)
+            {
+                weather.Value.weatherObject.SetActive(false);
+            }
         }
     }
 
@@ -63,12 +104,12 @@ public class WeatherController : MonoBehaviour
         Debug.Log(info.ToString());
         string weather = info.weather[0].main;
         weatherText.text = weather;
-        if (!hash.TryGetValue(weather, out Color weatherColor))
+        if (!hash.TryGetValue(weather, out WeatherObject weatherObject))
         {
-            weatherColor = Color.red;
+            weatherObject = new WeatherObject(Color.red, clear);
         }
 
-        weatherText.color = weatherColor;
+        weatherText.color = weatherObject.color;
 
         return info;
     }
