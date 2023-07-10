@@ -29,11 +29,11 @@ public class WeatherController : MonoBehaviour
     void Start()
     {
         hash.Add("Thunderstorm", Color.yellow);
-        hash.Add("Drizzle", Color.cyan);
+        hash.Add("Drizzle", Color.green);
         hash.Add("Rain", Color.blue);
         hash.Add("Snow", Color.white);
-        hash.Add("Clear", Color.grey);
-        hash.Add("Clouds", Color.grey);
+        hash.Add("Clear", Color.cyan);
+        hash.Add("Clouds", new Color(0.75f, 0.75f, 0.75f));
 
         info = GetWeather();
     }
