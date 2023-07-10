@@ -21,11 +21,20 @@ public class WeatherController : MonoBehaviour
 
     double latitude = 32.777963, longitude = -96.79622;
 
+    public Dictionary<string, Color> hash = new Dictionary<string, Color>();
+
     private float apiCheckCountdown = API_CHECK_MAXTIME;
 
     // Start is called before the first frame update
     void Start()
     {
+        hash.Add("Thunderstorm", Color.yellow);
+        hash.Add("Drizzle", Color.cyan);
+        hash.Add("Rain", Color.blue);
+        hash.Add("Snow", Color.white);
+        hash.Add("Clear", Color.grey);
+        hash.Add("Clouds", Color.grey);
+
         info = GetWeather();
     }
 
@@ -52,7 +61,14 @@ public class WeatherController : MonoBehaviour
         WeatherInfo info = JsonUtility.FromJson<WeatherInfo>(jsonResponse);
 
         Debug.Log(info.ToString());
-        weatherText.text = info.weather[0].main;
+        string weather = info.weather[0].main;
+        weatherText.text = weather;
+        if (!hash.TryGetValue(weather, out Color weatherColor))
+        {
+            weatherColor = Color.red;
+        }
+
+        weatherText.color = weatherColor;
 
         return info;
     }
