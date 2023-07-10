@@ -21,8 +21,8 @@ public class HUD : MonoBehaviour
     void Update()
     {
         DateTime now = DateTime.Now;
-        timeText.text = now.ToLongTimeString();
-        utcText.text = now.ToLocalTime().ToUniversalTime().ToLongTimeString() + " UTC";
+        timeText.text = now.ToShortTimeString();
+        utcText.text = now.ToLocalTime().ToUniversalTime().ToShortTimeString() + " UTC";
         dateText.text = now.ToLongDateString();
         utcDateText.text = now.ToLocalTime().ToUniversalTime().ToLongDateString() + " UTC";
     }
