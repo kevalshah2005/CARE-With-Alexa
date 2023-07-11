@@ -32,7 +32,8 @@ public class WeatherController : MonoBehaviour
 
     public WeatherInfo info;
 
-    double latitude = 32.777963, longitude = -96.79622;
+    double latitude = 32.9914505248949, longitude = -96.7515356359683;
+
 
     public Dictionary<string, WeatherObject> hash = new Dictionary<string, WeatherObject>();
 
