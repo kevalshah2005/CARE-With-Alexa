@@ -1,50 +1,113 @@
 fileFormatVersion: 2
 guid: 1f027cd5c40b5344fb229ca6067e8052
-timeCreated: 1512325107
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: pCube63
-    100004: pCube64
-    100006: pCube65
-    100008: pCube66
-    100010: pSphere2
-    100012: pSphere3
-    100014: pSphere4
-    100016: transform10
-    100018: transform11
-    100020: transform12
-    100022: transform13
-    100024: transform14
-    100026: transform9
-    400000: //RootNode
-    400002: pCube63
-    400004: pCube64
-    400006: pCube65
-    400008: pCube66
-    400010: pSphere2
-    400012: pSphere3
-    400014: pSphere4
-    400016: transform10
-    400018: transform11
-    400020: transform12
-    400022: transform13
-    400024: transform14
-    400026: transform9
-    2300000: pSphere4
-    3300000: pSphere4
-    4300000: pSphere4
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: pCube63
+  - first:
+      1: 100004
+    second: pCube64
+  - first:
+      1: 100006
+    second: pCube65
+  - first:
+      1: 100008
+    second: pCube66
+  - first:
+      1: 100010
+    second: pSphere2
+  - first:
+      1: 100012
+    second: pSphere3
+  - first:
+      1: 100014
+    second: pSphere4
+  - first:
+      1: 100016
+    second: transform10
+  - first:
+      1: 100018
+    second: transform11
+  - first:
+      1: 100020
+    second: transform12
+  - first:
+      1: 100022
+    second: transform13
+  - first:
+      1: 100024
+    second: transform14
+  - first:
+      1: 100026
+    second: transform9
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: pCube63
+  - first:
+      4: 400004
+    second: pCube64
+  - first:
+      4: 400006
+    second: pCube65
+  - first:
+      4: 400008
+    second: pCube66
+  - first:
+      4: 400010
+    second: pSphere2
+  - first:
+      4: 400012
+    second: pSphere3
+  - first:
+      4: 400014
+    second: pSphere4
+  - first:
+      4: 400016
+    second: transform10
+  - first:
+      4: 400018
+    second: transform11
+  - first:
+      4: 400020
+    second: transform12
+  - first:
+      4: 400022
+    second: transform13
+  - first:
+      4: 400024
+    second: transform14
+  - first:
+      4: 400026
+    second: transform9
+  - first:
+      23: 2300000
+    second: pSphere4
+  - first:
+      33: 3300000
+    second: pSphere4
+  - first:
+      43: 4300000
+    second: pSphere4
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 1
     materialSearch: 0
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -52,39 +115,63 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 5
+    globalScale: 15
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 1
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -94,14 +181,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.14999999
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
