@@ -69,6 +69,11 @@ public class WeatherController : MonoBehaviour
             weatherDisplay = !weatherDisplay;
         }
 
+        foreach (var weather in hash)
+        {
+            weather.Value.weatherObject.SetActive(false);
+        }
+
         if (weatherDisplay)
         {
             if (!hash.TryGetValue(info.weather[0].main, out WeatherObject weatherObject))
@@ -76,17 +81,7 @@ public class WeatherController : MonoBehaviour
                 weatherObject = new WeatherObject(Color.red, clear);
             }
 
-            foreach (var weather in hash) {
-                weather.Value.weatherObject.SetActive(false);
-            }
-
             weatherObject.weatherObject.SetActive(true);
-        } else
-        {
-            foreach (var weather in hash)
-            {
-                weather.Value.weatherObject.SetActive(false);
-            }
         }
     }
 
