@@ -256,6 +256,10 @@ PrefabInstance:
       propertyPath: joyPadClickButton
       value: 2105344
       objectReference: {fileID: 0}
+    - target: {fileID: 114392411909336904, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
+      propertyPath: maxLength
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 120006741097097638, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -403,10 +407,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9029294806191818305, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1932455367}
     - target: {fileID: 9029294806191818308, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 841356318}
     - target: {fileID: 9029294806191818310, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
       propertyPath: pointer
       value: 
@@ -2111,6 +2119,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829828506}
   m_CullTransparentMesh: 1
+--- !u!4 &841356318 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+  m_PrefabInstance: {fileID: 1932455366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &895048642
 PrefabInstance:
   m_ObjectHideFlags: 0
