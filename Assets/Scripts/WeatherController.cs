@@ -65,7 +65,7 @@ public class WeatherController : MonoBehaviour
             apiCheckCountdown = API_CHECK_MAXTIME;
         }
 
-        if (OVRInput.GetUp(OVRInput.Button.Two) || Input.GetKeyUp(KeyCode.W))
+        if (OVRInput.GetUp(OVRInput.Button.Three) || Input.GetKeyUp(KeyCode.W))
         {
             weatherDisplay = !weatherDisplay;
         }
