@@ -1,0 +1,245 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5a46bda3295124c99b0e6537ac7252, type: 3}
+  m_Name: voice
+  m_EditorClassIdentifier: 
+  _clientAccessToken: KFQCUBRQXQN2SBUI6AH2NAWXC65DFPTN
+  _appInfo:
+    name: demo
+    id: 121760327637942
+    lang: en
+    isPrivate: 0
+    createdAt: 2023-07-12T09:10:19-0700
+    trainingStatus: 1
+    lastTrainDuration: 25
+    lastTrainedAt: 2023-07-14T11:46:21-0700
+    nextTrainAt: 2023-07-14T11:45:56-0700
+    intents:
+    - id: 829187561612355
+      name: change_color
+      entities:
+      - name: color:color
+        id: 996838824785550
+      - name: shape:shape
+        id: 1500260330744747
+    - id: 1025481008618422
+      name: send_to_voice
+      entities:
+      - name: anything:anything
+        id: 201657009538954
+      - name: wake_work:wake_word
+        id: 1835523266844947
+    entities:
+    - name: anything
+      id: 708607234409846
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: anything
+        id: 201657009538954
+      keywords:
+      - keyword: anything
+        synonyms:
+        - anything
+    - name: color
+      id: 1646404535866152
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: color
+        id: 996838824785550
+      keywords:
+      - keyword: red
+        synonyms:
+        - red
+    - name: shape
+      id: 6712601338773691
+      lookups:
+      - keywords
+      roles:
+      - name: shape
+        id: 1500260330744747
+      keywords:
+      - keyword: cube
+        synonyms:
+        - cube
+    - name: wake_work
+      id: 2573424269474291
+      lookups:
+      - keywords
+      roles:
+      - name: wake_word
+        id: 1835523266844947
+      keywords:
+      - keyword: alexa
+        synonyms:
+        - alexa
+    traits:
+    - name: wit$sentiment
+      id: 5ac2b50a-44e4-466e-9d49-bad6bd40092c
+      values:
+      - id: 561371444570330
+        value: negative
+      - id: 1621429681354257
+        value: neutral
+      - id: 2522989351346070
+        value: positive
+    voices:
+    - name: Cael
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Cam
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Carl
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Charlie
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - fast
+      - projected
+    - name: Cody
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Connor
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Cooper
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Prospector
+      locale: en_US
+      gender: male
+      styles:
+      - default
+    - name: Railey
+      locale: en_US
+      gender: female
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Rebecca
+      locale: en_US
+      gender: female
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Remi
+      locale: en_US
+      gender: female
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Rubie
+      locale: en_US
+      gender: female
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Vampire
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Colin
+      locale: en_CA
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Rosie
+      locale: en_CA
+      gender: female
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+  _configurationId: 
+  timeoutMS: 10000
+  endpointConfiguration:
+    uriScheme: 
+    authority: 
+    port: 0
+    witApiVersion: 
+    speech: 
+    message: 
+    dictation: 
+  isDemoOnly: 0
+  useConduit: 1
+  _manifestLocalPath: ConduitManifest-936c73fa-8772-4413-beed-f5d8b7969193.json
+  excludedAssemblies:
+  - Oculus.Voice.Demo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - Meta.WitAi.Samples, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  relaxedResolution: 0
