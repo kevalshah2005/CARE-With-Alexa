@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class VoiceHandler : MonoBehaviour
 {
     public GameObject cube;
+    public GameObject sphere;
     public GameObject SpawnLocation;
     // Start is called before the first frame update
     void Start()
@@ -20,5 +21,10 @@ public class VoiceHandler : MonoBehaviour
     }
     public void OnCube(){
         Instantiate(cube, new Vector3(SpawnLocation.transform.position.x,SpawnLocation.transform.position.y,SpawnLocation.transform.position.z),Quaternion.identity);
+    }
+
+    public void OnSphere()
+    {
+        Instantiate(sphere, new Vector3(SpawnLocation.transform.position.x, SpawnLocation.transform.position.y, SpawnLocation.transform.position.z), Quaternion.identity);
     }
 }
