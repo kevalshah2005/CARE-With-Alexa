@@ -13,7 +13,7 @@ public class ActivateVoice : MonoBehaviour
     private void Update()
     {
         if(wit == null) wit = GetComponent<Wit>();
-        if(OVRInput.Get(OVRInput.Button.One))
+        if(OVRInput.Get(OVRInput.Button.Four))
         {
             WitActivate();
         }

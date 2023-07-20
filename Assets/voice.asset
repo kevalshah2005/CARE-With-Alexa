@@ -21,8 +21,8 @@ MonoBehaviour:
     createdAt: 2023-07-12T09:10:19-0700
     trainingStatus: 1
     lastTrainDuration: 25
-    lastTrainedAt: 2023-07-14T11:46:21-0700
-    nextTrainAt: 2023-07-14T11:45:56-0700
+    lastTrainedAt: 2023-07-20T09:27:13-0700
+    nextTrainAt: 2023-07-20T09:26:48-0700
     intents:
     - id: 829187561612355
       name: change_color
@@ -36,6 +36,10 @@ MonoBehaviour:
       entities:
       - name: anything:anything
         id: 201657009538954
+      - name: shape:shape
+        id: 1500260330744747
+      - name: summon:summon
+        id: 224411383403037
       - name: wake_work:wake_word
         id: 1835523266844947
     entities:
@@ -74,6 +78,21 @@ MonoBehaviour:
       - keyword: cube
         synonyms:
         - cube
+      - keyword: sphere
+        synonyms:
+        - sphere
+    - name: summon
+      id: 1709196259517551
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: summon
+        id: 224411383403037
+      keywords:
+      - keyword: summon
+        synonyms:
+        - summon
     - name: wake_work
       id: 2573424269474291
       lookups:
@@ -226,7 +245,7 @@ MonoBehaviour:
       - formal
       - fast
       - projected
-  _configurationId: 
+  _configurationId: d33f768b-48fe-40f1-87f8-cf03582f7b59
   timeoutMS: 10000
   endpointConfiguration:
     uriScheme: 
