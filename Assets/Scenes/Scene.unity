@@ -6526,7 +6526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1898022251}
-  - component: {fileID: 1898022252}
+  - component: {fileID: 1898022253}
   m_Layer: 0
   m_Name: ResponseHandler
   m_TagString: Untagged
@@ -6549,7 +6549,7 @@ Transform:
   m_Father: {fileID: 125301644}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1898022252
+--- !u!114 &1898022253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6561,12 +6561,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591c3d6f017c11b4faa41506d75635b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Voice: {fileID: 125301643}
+  Voice: {fileID: 125301641}
   ValidateEarly: 0
   intent: send_to_voice
   confidenceThreshold: 0.6
   valueMatchers:
-  - path: entities.wake_work:wake_word[0].value
+  - path: entities.shape:shape[0].type
     witValueReference: {fileID: 0}
     contentRequired: 1
     matchMethod: 0
