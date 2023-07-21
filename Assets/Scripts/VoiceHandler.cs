@@ -10,7 +10,9 @@ public class VoiceHandler : MonoBehaviour
     public GameObject sphere;
     public GameObject SpawnLocation;
     public Light[] lights;
-        public TextMeshProUGUI weatherText;
+    public AudioClip[] music;
+    public AudioSource musicPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,7 @@ public class VoiceHandler : MonoBehaviour
 
     public void playMusic(string[] values)
     {
-        
+        musicPlayer.clip = music[Random.Range(0, music.Length)];
+        musicPlayer.Play();
     }
 }
