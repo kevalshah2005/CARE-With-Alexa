@@ -10,7 +10,10 @@ public class VoiceHandler : MonoBehaviour
     public GameObject sphere;
     public GameObject SpawnLocation;
     public Light[] lights;
+    public AudioClip[] music;
+    public AudioSource musicPlayer;
         public TextMeshProUGUI weatherText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,6 @@ public class VoiceHandler : MonoBehaviour
             lights[x] = lights[x].GetComponent<Light>();
             lights[x].enabled = false;
         }
-        
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class VoiceHandler : MonoBehaviour
         
     }
     public void OnSpawn(string[] values){
+         weatherText.text = values[0];
         if(values[0] == "cube"){
             Instantiate(cube, new Vector3(SpawnLocation.transform.position.x,SpawnLocation.transform.position.y,SpawnLocation.transform.position.z),Quaternion.identity);
         }
@@ -39,7 +42,7 @@ public class VoiceHandler : MonoBehaviour
 
     public void lightChange(string[] values)
     {
-        //weatherText.text = values[0];
+        weatherText.text = values[0];
         for(int x = 0; x < lights.Length; x++)
         {
             if(values[0] == "lights on"){
@@ -50,4 +53,17 @@ public class VoiceHandler : MonoBehaviour
             }
         }
     }
+
+    public void playMusic(string[] values)
+    {
+        weatherText.text = values[0];
+        if(values[0] == "play music"){
+        musicPlayer.clip = music[Random.Range(0, music.Length)];
+        musicPlayer.Play();
+        }
+        if(values[0] == "stop music"){
+            musicPlayer.Stop();
+        }
+    }
+
 }
