@@ -50,4 +50,9 @@ public class VoiceHandler : MonoBehaviour
             }
         }
     }
+
+    public void playMusic(string[] values)
+    {
+        
+    }
 }
