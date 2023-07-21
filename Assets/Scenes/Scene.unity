@@ -2479,6 +2479,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 598ff9510b29603418dfb274c6537246, type: 3}
   - {fileID: 8300000, guid: 8ca898a35af8fe448b4292c9f562371b, type: 3}
   musicPlayer: {fileID: 1660005061}
+  weatherText: {fileID: 285880158}
 --- !u!1001 &791218747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7007,7 +7008,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 765727569}
         m_TargetAssemblyTypeName: VoiceHandler, Assembly-CSharp
-        m_MethodName: playMusic
+        m_MethodName: OnSpawn
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7058,7 +7059,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1898022254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7089,13 +7090,13 @@ MonoBehaviour:
   onMultiValueEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 765727567}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 765727569}
+        m_TargetAssemblyTypeName: VoiceHandler, Assembly-CSharp
+        m_MethodName: playMusic
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
