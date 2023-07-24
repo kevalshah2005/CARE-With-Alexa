@@ -9,10 +9,10 @@ public class VoiceHandler : MonoBehaviour
     public GameObject cube;
     public GameObject sphere;
     public GameObject SpawnLocation;
-    public Light[] lights;
     public AudioClip[] music;
     public AudioSource musicPlayer;
     public TextMeshProUGUI weatherText;
+    public Lights lights;
 
     int cubesSpawned = 0;
     int spheresSpawned = 0;
@@ -20,18 +20,14 @@ public class VoiceHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for(int x = 0; x < lights.Length; x++)
-        {
-            lights[x] = lights[x].GetComponent<Light>();
-            lights[x].enabled = false;
-        }
+        lights.LightsOff();
     }
 
     // Update is called once per frame
     void Update()
     {
         string musicPlayingText = musicPlayer.isPlaying ? musicPlayer.clip.name : "None";
-        string lightsEnabledText = lights[0].enabled ? "Enabled" : "Disabled";
+        string lightsEnabledText = lights.on ? "Enabled" : "Disabled";
         weatherText.text = string.Format("Music Playing: {0}\nLights: {1}\nCubes Spawned: {2}\nSpheres Spawned: {3}", musicPlayingText, lightsEnabledText, cubesSpawned, spheresSpawned);
     }
 
@@ -49,15 +45,11 @@ public class VoiceHandler : MonoBehaviour
 
     public void lightChange(string[] values)
     {
-        weatherText.text = values[0];
-        for(int x = 0; x < lights.Length; x++)
-        {
-            if(values[0] == "lights on"){
-                lights[x].enabled = true;
-            }
-            else if(values[0] == "lights off"){
-                lights[x].enabled = false;
-            }
+        weatherText.text = values[0]; 
+        if(values[0] == "lights on") {
+            lights.LightsOn();
+        } else if(values[0] == "lights off"){
+            lights.LightsOff();
         }
     }
 
