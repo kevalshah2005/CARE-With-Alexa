@@ -6,6 +6,7 @@ public class Lights : MonoBehaviour
 {
     public Light[] lights;
     public bool on;
+    public Transform lightSwitch;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,12 @@ public class Lights : MonoBehaviour
         }
 
         on = false;
+
+        lightSwitch.transform.eulerAngles = new Vector3(
+            lightSwitch.transform.eulerAngles.x,
+            lightSwitch.transform.eulerAngles.y,
+            180
+        );
     }
 
     public void LightsOn()
@@ -37,5 +44,11 @@ public class Lights : MonoBehaviour
         }
 
         on = true;
+
+        lightSwitch.transform.eulerAngles = new Vector3(
+            lightSwitch.transform.eulerAngles.x,
+            lightSwitch.transform.eulerAngles.y,
+            0
+        );
     }
 }
