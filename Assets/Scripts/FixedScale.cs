@@ -13,5 +13,6 @@ public class FixedScale : MonoBehaviour
     void Update()
     {
         transform.localScale = new Vector3(FixeScale / parent.transform.localScale.x, FixeScale / parent.transform.localScale.y, FixeScale / parent.transform.localScale.z);
+        transform.position = new Vector3(parent.transform.position.x, parent.transform.position.y + 3, parent.transform.position.z);
     }
 }

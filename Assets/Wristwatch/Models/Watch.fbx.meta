@@ -1,50 +1,96 @@
 fileFormatVersion: 2
 guid: 33dfe05ccdda6a443ac14f1e5a4881b9
-timeCreated: 1479181360
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Hours
-    100002: Minutes
-    100004: Seconds
-    100006: //RootNode
-    400000: Hours
-    400002: Minutes
-    400004: Seconds
-    400006: //RootNode
-    2300000: Hours
-    2300002: Minutes
-    2300004: Seconds
-    2300006: //RootNode
-    3300000: Hours
-    3300002: Minutes
-    3300004: Seconds
-    3300006: //RootNode
-    4300000: Watch
-    4300002: Seconds
-    4300004: Hours
-    4300006: Minutes
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Hours
+  - first:
+      1: 100002
+    second: Minutes
+  - first:
+      1: 100004
+    second: Seconds
+  - first:
+      1: 100006
+    second: //RootNode
+  - first:
+      4: 400000
+    second: Hours
+  - first:
+      4: 400002
+    second: Minutes
+  - first:
+      4: 400004
+    second: Seconds
+  - first:
+      4: 400006
+    second: //RootNode
+  - first:
+      23: 2300000
+    second: Hours
+  - first:
+      23: 2300002
+    second: Minutes
+  - first:
+      23: 2300004
+    second: Seconds
+  - first:
+      23: 2300006
+    second: //RootNode
+  - first:
+      33: 3300000
+    second: Hours
+  - first:
+      33: 3300002
+    second: Minutes
+  - first:
+      33: 3300004
+    second: Seconds
+  - first:
+      33: 3300006
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: Watch
+  - first:
+      43: 4300002
+    second: Seconds
+  - first:
+      43: 4300004
+    second: Hours
+  - first:
+      43: 4300006
+    second: Minutes
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -52,25 +98,47 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -80,11 +148,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
