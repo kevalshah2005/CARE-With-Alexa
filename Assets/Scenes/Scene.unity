@@ -571,6 +571,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1189538430055632689, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1932455367}
+    - target: {fileID: 1189538430055632689, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504877060205247808, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504877060205247808, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504877060205247808, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504877060205247808, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.501
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511486665699802601, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9029294805808665192, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -655,6 +683,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9029294805808665488, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c36e4439703349e4db4d7a45451b4d88, type: 2}
     - target: {fileID: 9029294805808665490, guid: 5fa461853dc3ec848bf293601d54c42d, type: 3}
       propertyPath: m_Name
       value: Cube
