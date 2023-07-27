@@ -9,7 +9,7 @@ public class CubeCanvas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = FindObjectsByType<OVRPlayerController>(FindObjectsSortMode.None)[0].gameObject.transform;
     }
 
     // Update is called once per frame
