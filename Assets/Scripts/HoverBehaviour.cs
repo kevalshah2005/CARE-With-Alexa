@@ -7,7 +7,7 @@ public class HoverBehaviour : MonoBehaviour
 {
     public Outline outline;
     public bool hovering = false;
-    public GameObject menu;
+    public static GameObject hoveredObject;
 
     // Start is called before the first frame update
     void Start()
@@ -18,22 +18,21 @@ public class HoverBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hovering && OVRInput.Get(OVRInput.Button.Two))
-        {
-            menu.SetActive(true);
-        }
+        
     }
 
     public void OnPointerEnter()
     {
         outline.enabled = true;
         hovering = true;
+        hoveredObject = gameObject;
     }
 
     public void OnPointerExit()
     {
         outline.enabled = false;
         hovering = false;
+        hoveredObject = null;
     }
 
 }

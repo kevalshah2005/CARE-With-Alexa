@@ -1306,9 +1306,10 @@ GameObject:
   - component: {fileID: 9029294805808665492}
   - component: {fileID: 9029294805808665195}
   - component: {fileID: 8044621519217970474}
+  - component: {fileID: -5952830805742101102}
   m_Layer: 5
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Deletable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1431,7 +1432,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outline: {fileID: 9029294805808665493}
   hovering: 0
-  menu: {fileID: 9029294806191818316}
 --- !u!114 &9029294805808665195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,6 +1493,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &-5952830805742101102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9029294805808665490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d649eb1960bbe1b43914602a7353d718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverBehaviour: {fileID: 9029294805808665492}
+  menu: {fileID: 9029294806191818316}
 --- !u!1 &9029294805915512477
 GameObject:
   m_ObjectHideFlags: 0

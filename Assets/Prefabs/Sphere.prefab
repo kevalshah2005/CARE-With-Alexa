@@ -728,9 +728,10 @@ GameObject:
   - component: {fileID: 2575538556161947604}
   - component: {fileID: 6841066114267194754}
   - component: {fileID: 7995917467866117698}
+  - component: {fileID: 6475027684465017050}
   m_Layer: 5
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Deletable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -839,7 +840,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outline: {fileID: 2575538556161947178}
   hovering: 0
-  menu: {fileID: 2575538556517508083}
 --- !u!114 &2575538556161947604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,6 +914,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &6475027684465017050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2575538556161947181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d649eb1960bbe1b43914602a7353d718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverBehaviour: {fileID: 2575538556161947179}
+  menu: {fileID: 2575538556517508083}
 --- !u!1 &2575538556256914210
 GameObject:
   m_ObjectHideFlags: 0
