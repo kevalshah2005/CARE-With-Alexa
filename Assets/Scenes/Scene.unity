@@ -8260,6 +8260,7 @@ GameObject:
   - component: {fileID: 1898022252}
   - component: {fileID: 1898022253}
   - component: {fileID: 1898022254}
+  - component: {fileID: 1898022255}
   m_Layer: 0
   m_Name: ResponseHandler
   m_TagString: Untagged
@@ -8399,6 +8400,48 @@ MonoBehaviour:
       - m_Target: {fileID: 765727569}
         m_TargetAssemblyTypeName: VoiceHandler, Assembly-CSharp
         m_MethodName: playMusic
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!114 &1898022255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898022250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591c3d6f017c11b4faa41506d75635b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Voice: {fileID: 125301641}
+  ValidateEarly: 0
+  intent: send_to_voice
+  confidenceThreshold: 0.6
+  valueMatchers:
+  - path: entities.delete:delete[0].value
+    witValueReference: {fileID: 0}
+    contentRequired: 1
+    matchMethod: 0
+    comparisonMethod: 0
+    matchValue: 
+    floatingPointComparisonTolerance: 0.00009999999747378752
+    allowConfidenceOverlap: 0
+    confidenceRanges: []
+  formattedValueEvents: []
+  onMultiValueEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 765727569}
+        m_TargetAssemblyTypeName: VoiceHandler, Assembly-CSharp
+        m_MethodName: deleteObject
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

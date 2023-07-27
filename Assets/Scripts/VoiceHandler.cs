@@ -67,13 +67,10 @@ public class VoiceHandler : MonoBehaviour
 
     public void deleteObject(string[] values)
     {
-        if (values[0] == "delete object")
-        {
             if (HoverBehaviour.hoveredObject != null && HoverBehaviour.hoveredObject.tag == "Deletable")
             {
                 Destroy(HoverBehaviour.hoveredObject);
             }
-        }
     }
 
 }
