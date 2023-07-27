@@ -14,8 +14,7 @@ public class VoiceHandler : MonoBehaviour
     public TextMeshProUGUI weatherText;
     public Lights lights;
 
-    int cubesSpawned = 0;
-    int spheresSpawned = 0;
+    int objectsInScene = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,19 +27,19 @@ public class VoiceHandler : MonoBehaviour
     {
         string musicPlayingText = musicPlayer.isPlaying ? musicPlayer.clip.name : "None";
         string lightsEnabledText = lights.on ? "Enabled" : "Disabled";
-        weatherText.text = string.Format("Music Playing: {0}\nLights: {1}\nCubes Spawned: {2}\nSpheres Spawned: {3}", musicPlayingText, lightsEnabledText, cubesSpawned, spheresSpawned);
+        weatherText.text = string.Format("Music Playing: {0}\nLights: {1}\nObjects in Scene: {2}", musicPlayingText, lightsEnabledText, objectsInScene);
     }
 
     public void OnSpawn(string[] values){
         //weatherText.text = values[0];
         if(values[0] == "cube"){
             Instantiate(cube, new Vector3(SpawnLocation.transform.position.x,SpawnLocation.transform.position.y,SpawnLocation.transform.position.z),Quaternion.identity);
-            cubesSpawned++;
+            objectsInScene++;
         }
         else if(values[0] == "sphere")
         {
             Instantiate(sphere, new Vector3(SpawnLocation.transform.position.x, SpawnLocation.transform.position.y, SpawnLocation.transform.position.z), Quaternion.identity);
-            spheresSpawned++;
+            objectsInScene++;
         }
     }
 
@@ -73,6 +72,7 @@ public class VoiceHandler : MonoBehaviour
             if (HoverBehaviour.hoveredObject != null && HoverBehaviour.hoveredObject.tag == "Deletable")
             {
                 Destroy(HoverBehaviour.hoveredObject);
+                objectsInScene--;
             }}
     }
 
