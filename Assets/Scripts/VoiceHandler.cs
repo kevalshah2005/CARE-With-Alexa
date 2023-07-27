@@ -28,10 +28,11 @@ public class VoiceHandler : MonoBehaviour
     {
         string musicPlayingText = musicPlayer.isPlaying ? musicPlayer.clip.name : "None";
         string lightsEnabledText = lights.on ? "Enabled" : "Disabled";
-        weatherText.text = string.Format("Music Playing: {0}\nLights: {1}\nCubes Spawned: {2}\nSpheres Spawned: {3}", musicPlayingText, lightsEnabledText, cubesSpawned, spheresSpawned);
+        //weatherText.text = string.Format("Music Playing: {0}\nLights: {1}\nCubes Spawned: {2}\nSpheres Spawned: {3}", musicPlayingText, lightsEnabledText, cubesSpawned, spheresSpawned);
     }
 
     public void OnSpawn(string[] values){
+        weatherText.text = values[0];
         if(values[0] == "cube"){
             Instantiate(cube, new Vector3(SpawnLocation.transform.position.x,SpawnLocation.transform.position.y,SpawnLocation.transform.position.z),Quaternion.identity);
             cubesSpawned++;
@@ -67,10 +68,12 @@ public class VoiceHandler : MonoBehaviour
 
     public void deleteObject(string[] values)
     {
+        if(values[0] == "delete object"){
+            weatherText.text = values[0];
             if (HoverBehaviour.hoveredObject != null && HoverBehaviour.hoveredObject.tag == "Deletable")
             {
                 Destroy(HoverBehaviour.hoveredObject);
-            }
+            }}
     }
 
 }
