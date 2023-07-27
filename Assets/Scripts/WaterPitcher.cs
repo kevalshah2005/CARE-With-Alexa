@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class WaterPitcher : MonoBehaviour
 {
-    public Outline outline;
-    public bool hovering = false;
     public AudioClip waterFillSound;
     public AudioSource waterSoundSource;
     public GameObject water;
+    public HoverBehaviour hoverBehaviour;
 
     // Start is called before the first frame update
     void Start()
@@ -19,24 +18,12 @@ public class WaterPitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hovering && OVRInput.GetUp(OVRInput.Button.One) && !water.activeSelf)
+        if (hoverBehaviour.hovering && OVRInput.GetUp(OVRInput.Button.One) && !water.activeSelf)
         {
             waterSoundSource.clip = waterFillSound;
             waterSoundSource.Play();
             StartCoroutine(FillWater());
         }
-    }
-
-    public void OnPointerEnter()
-    {
-        outline.enabled = true;
-        hovering = true;
-    }
-
-    public void OnPointerExit()
-    {
-        outline.enabled = false;
-        hovering = false;
     }
 
     public IEnumerator FillWater()

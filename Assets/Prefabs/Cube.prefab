@@ -103,8 +103,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6376932238912618360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.501}
+  m_LocalScale: {x: 0.0101, y: 0.0101, z: 0.0101}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3725099827539956731}
@@ -133,7 +133,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &3182826309844088025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 9029294804702381456}
   - component: {fileID: 9029294804702381462}
   - component: {fileID: 9029294804702381463}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 9029294805098589949}
   - component: {fileID: 9029294805098589939}
   - component: {fileID: 9029294805098589948}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1166,7 +1166,7 @@ GameObject:
   - component: {fileID: 9029294805732546554}
   - component: {fileID: 9029294805732546552}
   - component: {fileID: 9029294805732546553}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1306,9 +1306,10 @@ GameObject:
   - component: {fileID: 9029294805808665492}
   - component: {fileID: 9029294805808665195}
   - component: {fileID: 8044621519217970474}
+  - component: {fileID: -5952830805742101102}
   m_Layer: 5
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Deletable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1364,7 +1365,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 161229d31e885744bb7d0868b542068e, type: 2}
+  - {fileID: 2100000, guid: c36e4439703349e4db4d7a45451b4d88, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1431,7 +1432,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outline: {fileID: 9029294805808665493}
   hovering: 0
-  menu: {fileID: 9029294806191818316}
 --- !u!114 &9029294805808665195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,6 +1493,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &-5952830805742101102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9029294805808665490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d649eb1960bbe1b43914602a7353d718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverBehaviour: {fileID: 9029294805808665492}
+  menu: {fileID: 9029294806191818316}
 --- !u!1 &9029294805915512477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,7 +1784,7 @@ GameObject:
   - component: {fileID: 9029294806250687648}
   - component: {fileID: 9029294806250687654}
   - component: {fileID: 9029294806250687655}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

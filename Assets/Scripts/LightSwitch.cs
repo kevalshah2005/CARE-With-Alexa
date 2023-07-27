@@ -5,8 +5,7 @@ using UnityEngine.EventSystems;
 
 public class LightSwitch : MonoBehaviour
 {
-    public Outline outline;
-    public bool hovering = false;
+    public HoverBehaviour hoverBehaviour;
     public Lights lights;
 
     // Start is called before the first frame update
@@ -18,7 +17,7 @@ public class LightSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hovering && OVRInput.GetUp(OVRInput.Button.One))
+        if (hoverBehaviour.hovering && OVRInput.GetUp(OVRInput.Button.One))
         {
             if (lights.on)
             {
@@ -30,17 +29,4 @@ public class LightSwitch : MonoBehaviour
             }
         }
     }
-
-    public void OnPointerEnter()
-    {
-        outline.enabled = true;
-        hovering = true;
-    }
-
-    public void OnPointerExit()
-    {
-        outline.enabled = false;
-        hovering = false;
-    }
-
 }
